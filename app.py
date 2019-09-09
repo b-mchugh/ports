@@ -23,7 +23,7 @@ class RH(BaseHTTPRequestHandler):
         return
 
 def run():
-    server_address = (IP, PORT)
+    server_address = (IP, int(PORT))
     httpd = HTTPServer(server_address, RH)
     httpd.serve_forever()
 run()
